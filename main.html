@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nasilsil</title>
+    <link rel="stylesheet" href="css.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="mobile.js" defer></script>
+	
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="main.html"><img src="logon.png" alt="Logo"></a> 
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">SKLEP</a></li>
+				       <li>
+                    <a href="#">O NAS</a>
+                    <ul class="dropdown">
+                        <li><a href="http://www.stetimun.lo2.szczecin.pl/secretariat/">Właściciele</a></li>
+                        <li><a href="#">Dostawcy</a>
+                        </li>
+                        <li><a href=" http://www.stetimun.lo2.szczecin.pl/press/">Informacje prawne</a></li>
+                    </ul>
+                </li>
+                <li><a href="http://stetimun.com/elmundo/">FORMULARZ ZWROTÓW</a></li>
+				<li><a href="#">LOGOWANIE</a></li>
+            </ul>
+        </nav>
+		
+		
+    </header>
+	
+<script>
+  window.addEventListener('scroll', function() {
+    var header = document.querySelector('header');
+    if (window.scrollY > 50) {
+      header.classList.add('header-scroll');
+    } else {
+      header.classList.remove('header-scroll');
+    }
+  });
+	
+	
+	
+	
+	
+	
+	
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll('.jprdl img');
+
+    const lazyLoad = (target) => {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            observer.unobserve(img);
+          }
+        });
+      });
+
+      observer.observe(target);
+    };
+
+    images.forEach(image => {
+      image.dataset.src = image.src;
+      image.src = "";  
+      lazyLoad(image);
+    });
+
+    const debounce = (func, delay) => {
+      let timeout;
+      return function (...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), delay);
+      };
+    };
+
+    const toggleFullScreen = debounce((image) => {
+      image.classList.toggle('full-screen');
+    }, 200);
+
+    images.forEach((image) => {
+      image.addEventListener('click', () => toggleFullScreen(image));
+    });
+  });
+
+	
+	
+	
+	
+	
+	
+	
+
+</script>
+
+<main id="content-page">
+<div class="container">
+	<img class="bg" src="tlo.png">
+	<div class="text-container">
+        <h1>NASILSIL<br></h1>
+	<h3>Poznaj Smaki Turcji</h3>
+</div></div>
+
+<div class="container-mobile">
+	<img class="bg-mobile" src="">
+<div class="text-container">
+		<h1></h1>
+		<h3>20.11-22.11.2025<br>
+		„Empowering voices, shaping tomorrow!”</h3>
+</div></div>
+
+<br></br></br></br></br></br>
+<h5>Witaj w NasilSil – smakuje jak w Turcji!</h5>
+<h2>Jesteśmy nową marką, która powstała z pasji do dobrego jedzenia i miłości do aromatycznych przypraw. W NasilSil wierzymy, że prawdziwy smak zaczyna się od jakości – dlatego sprowadzamy nasze przyprawy bezpośrednio z serca Turcji, skąd pochodzą najintensywniejsze i najbardziej naturalne mieszanki.
+<br></br>
+Współpracujemy wyłącznie ze sprawdzonymi dostawcami, którzy dbają o tradycję i świeżość zbiorów. Nasze produkty nie mają nic wspólnego z masową produkcją – każda paczka to zaproszenie do świata orientu, do kuchni, która rozgrzewa zmysły i budzi wspomnienia.
+<br></br>
+Dopiero zaczynamy, ale robimy to z sercem i determinacją. Chcemy, abyś poczuł różnicę już od pierwszego zamówienia. Nie jesteśmy kolejnym sklepem z przyprawami – jesteśmy Twoim nowym źródłem inspiracji kulinarnych.
+<br></br>
+Rozgość się, poszukaj ulubionych smaków, a jeśli masz pytania – pisz śmiało. Jesteśmy tu dla Ciebie!
+<br></h2>
+<h2 style="font-weight:bold">NasilSil – Smak, który przychodzi z daleka, by zostać na dłużej.
+</h2>
+
+<div class="main-buttons">
+<a href="#" class="main-button">Kontakt</a>
+<a href="#" class="main-button">Produkty</a>
+<a href="#" class="main-button">Regulamin</a></div>
+
+<div class="patrons">
+<h5 style="text-align:center;">Metody płatności</h5>
+<div class="patron-logo">
+<img src="blik.jpg">
+<img src="visa.jpg">
+<img src="mastercard.png">
+<img src="przelewy.png">
+</div></div>
+<div class="patrons">
+<h5 style="text-align:center;">Dostawa - kurier lub paczkomat</h5>
+<div class="patron-logo">
+<img src="inpost.png">
+</div></div>
+</br><br></br>
+<div class="map-tlo">
+<div class="map">
+<h5>Gdzie znajduje się siedziba firmy? Ul. Zielona 3, Dobra</h5>
+<div class="map-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2374.7593566435594!2d14.415295933749343!3d53.472760698179385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47aa0e079c38dbf5%3A0x89b80669b2924a6a!2sZielona%203%2C%2072-003%20Redlica!5e0!3m2!1spl!2spl!4v1747840514263!5m2!1spl!2spl" allowfullscreen="" loading="lazy"></iframe></div>
+</div>
+</br></br>
+</div>
+<footer>
+<h4>Nasze platformy w mediach społecznościowych</h4>
+<a href="#" target="_blank" class="fa fa-instagram"></a>
+ <a href="#" target="_blank" class="fa fa-facebook"></a>
+<a href="#" target="_blank" class="fa fa-youtube"></a>  
+
+<h4><br>W razie jakichkolwiek pytań można zadać je drogą mailową:</h4>
+<a href="mailto:kontakt@nasilsil.pl" target="_blank" class="fa fa-envelope"></a> 
+ <h6><br>©Nasilsil2025<br>
+ Created by: Deniz Önal</h6>
+</footer>
+</main>
